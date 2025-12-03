@@ -1,0 +1,398 @@
+@charset "UTF-8";
+:root{
+    --brack:#4C4C4C;
+    --blue:#689FCB;
+    --green:#4AA3B3;
+}
+html{
+    font-size: 62.5%;
+}
+img{
+    max-width: 100%;
+}
+body{
+     font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  line-height: 1.8;
+  color: white;
+  background-color: var(--blue);
+  transition: opacity 0.8s ease;
+       opacity: 0;
+}
+body.loaded {
+  opacity: 1;
+}
+
+.feedIn{
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: 0.8s;
+}
+.feedIn.animated{
+    transform: translate(0, 0);
+    opacity: 1;
+}  
+/* pc comon */
+@media screen and (min-width:769px) {
+  body{
+    line-height: 2.2;
+  }  
+}
+/* header */
+.header__group{
+    display:block;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header__logo{
+    flex-direction: column;
+    display: flex;
+    gap: 30px;
+    margin: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.logo{
+    display: block;
+    width: 100px;
+    height: 44px;
+    margin: 10px;
+}
+.header__btn,.instalogo,.mail{
+    display: block;
+    width: 30px;
+    height: 30px;
+
+}
+.nav{
+    background-color: rgba(81, 165, 232, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 20px;
+    align-items: center;
+    transition: .4s;
+    transform: translateX(-100%);
+    z-index: 100;
+}
+.nav.active{
+    transform: translateX(0);
+}
+.nav :first-child{
+    margin-top: 80px;
+}
+.close{
+    display: block;
+    width: 30px;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.fixed-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: orange;
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 120px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 7px 10px rgba(0,0,0,0.25);
+  text-decoration: none;
+  z-index: 100;
+  transition: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: white 2px solid;
+}
+.nav__btn1{
+
+  
+  background:rgba(243, 152, 29, .9);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 22px;
+  box-shadow: 0 7px 10px rgba(0,0,0,0.25);
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+  display: block;
+  width: 250px;
+  height: 80px;
+  font-weight: 600;
+  border: white 2px solid;
+}
+
+.fixed-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+@media screen and (min-width:769px) {
+    .nav{
+        font-size: 30px;
+    }
+    .header__btn,.instalogo,.mail{
+    width: 50px;
+    height: 50px;
+}
+.close{
+    width: 50px;
+    height: auto;
+}
+.logo{
+    width: 200px;
+    height: 88px;
+    margin: 10px;
+}
+.header__logo{
+    gap: 50px;
+}
+}
+.concept__p{
+    padding: 0 10px;
+}
+.concept__p__title{
+    font-size:36px;
+    font-weight: 700;
+    text-align: center;
+    background-image: url(./image/siro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 180px;
+}
+.concept__p__topic{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.concept__p__group__topic{
+    font-size: 18px;
+    margin-top: 30px;
+}
+.concept__p__group__txt{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.concept__p__img {
+    position: relative;
+    width: fit-content;  
+    margin: 0 auto;      
+}
+
+
+.concept__p__img1 {
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.concept__p__img::after {
+    content: "（図１）";
+    font-size: 15px;
+    position: absolute;
+    right: 0;       
+    bottom: -30px;  
+    color: #fff;    
+}
+.concept__group2__topic{
+    margin-top: 40px;
+    font-size: 20px;
+}
+.concept__group2__txt{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.concept__group3__topic{
+    margin-top: 40px;
+    font-size: 20px;
+}
+.concept__group3__txt{
+    margin-top: 20px;
+    font-size: 16px;
+}
+/* concept pc */
+@media screen and (min-width:1000px) {
+.concept__p{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+.concept__p__title{
+    font-size: 45px;
+}
+.concept__p__img{
+    margin: auto;
+    width: 100%;
+}
+.concept__p__img1{
+    width: 80%;
+    margin: auto;
+}
+.concept__block{
+    display: block;
+    width: 90%;
+}
+.concept__p__topic{
+    font-size: 32px;
+}
+.concept__p__group__topic{
+    font-size: 28px;
+}
+.concept__p__group__txt{
+    font-size: 20px;
+}
+.concept__group2__topic{
+    font-size: 28px;
+}
+.concept__group2__txt{
+    font-size: 20px;
+}
+.concept__group3__topic{
+    font-size: 28px;
+}
+.concept__group3__txt{
+    font-size: 20px;
+}
+}
+.gallery{
+    background-color: white;
+    margin: 40px 10px;
+    padding: 30px 15px;
+}
+.gallery__title{
+    font-size: 36px;
+    color: var(--brack);
+    background-image: url(./image/ao.png);
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.carousel img {
+  width: 100%;
+}
+.carousel .slick-slide {
+    margin: 0 10px; 
+}
+.carousel{
+    margin-top: 30px;
+}
+.profiles{
+    background-color: white;
+    color: var(--brack);
+    padding: 20px 10px;
+    margin: 40px 10px;
+    border-radius: 15px;
+}
+.profile__topic{
+    font-size: 24px;
+    text-align: center;
+}
+.name{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+.name::before{
+    position: absolute;
+    content: "さがみ　じゅんこ";
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+.profile__topic2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.profile__txt{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sizuku3{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    max-width: 800px;
+}
+.btn__back{
+    display: block;
+    background-color: var(--green);
+    margin: 30px auto;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    height: 70px;
+    padding: 10px 50px;
+box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
+
+}
+/* footer */
+.footer{
+    margin-top: 50px;
+}
+.footer__logo{
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 14px;
+    margin: 30px 10px;
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 20px;
+}
+@media screen and (min-width:970px) {
+    .footer{
+        display: flex;
+  
+    }
+    .footer__logo{
+        width: 350px;
+        height: auto;
+        margin: 20px;
+    }
+    .footer__nav{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 20px;
+        font-size: 18px;
+    }
+}
